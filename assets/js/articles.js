@@ -59,5 +59,17 @@ var dataset = [
         time: "10am-7pm",
         description: "",
     },
+    {
+        title: 'Prom',
+        date: "2023-06-08",
+        time: "5pm-11pm",
+        description: "",
+    },
+    {
+        title: 'Graduation BBQ',
+        date: "2023-06-16",
+        time: "TBD",
+        description: "",
+    },
     
 ];
