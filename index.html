@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/logo.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+
+
+
+    <title>Home | Bayview StuCo</title>
+
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="loading">
+        <img id="breathing" src="assets/img/ombre_logo.png" >
+        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+      
+    <!-- NAV BAR -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="./index.html" class="nav-logo">
+                <img src="assets/img/ombre_logo.png" style="height: 100%;">
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../" class="nav-link active-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./events.html" class="nav-link" ;>Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="clubs.html" class="nav-link">Clubs</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="members.html" class="nav-link">Members</a>
+                    </li>
+                </ul>
+
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav-btns">
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main" style="width: 100%;">
+        <div style="width: 100%; position: relative; z-index:-10;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 150px; left:500px; width: 200px; opacity: 10%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 60px; left:-200px; width: 300px; opacity: 15%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: -400px; left:900px; width: 1000px; opacity: 40%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 150px; left:10px; width: 600px; opacity: 30%;">
+        </div>
+
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home-container container grid">
+                <img src="assets/img/stuco_group-removebg-preview (1).png" alt="" class="home-img">
+
+                <div class="home-data" style="text-align: center;">
+                    <h3>2022 - 2023</h3>
+                    <h1 class="home-title" style="text-align: center;">
+                        Bayview StuCo
+                    </h1>
+                    <p class="home-description" style="text-align: center;">
+                        ▷ Bayview SS's Official Student Council ◁
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- EVENTS -->
+        <div class="event-container1">
+            <h3>Upcoming Events</h3>
+
+            <div class="event-container2 container grid">
+
+                <template id='template'>
+                    <div class="event">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">{{day}}</div>
+                                <div class="month">{{month}}</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">{{title}}</h3>
+
+                            <div class="event-description">
+                                {{desc}}
+                            </div>
+
+                            <div class="event-timing">
+                                <img src="assets/img/time.png" alt="" /> {{time}}
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <div>
+                    <div id="items" style="max-width: 100%;"></div>
+                    <button id="loadMore" onclick="loadMoreData()">
+                        <span>Load More</span>
+                    </button>
+                </div>
+                <div style="height: 90%; height: fit-content; margin-top: 5%;">
+                    <img id="bengal" src="assets/img/Removal-799 (2).png"
+                        style="width:300px; margin-bottom: 2rem; border-radius: .5rem;">
+                </div>
+
+            </div>
+        </div>
+        <script src="assets/js/articles.js"></script>
+        <script>
+
+            var current = 0;
+            var i = 0
+            dataset.sort((a, b) => new Date(a.date) - new Date(b.date));
+            function loadData() {
+                let template = document.getElementById('template');
+                
+                while (current < 4) {
+                    if (new Date(dataset[i].date) < new Date()) {
+                        i += 1;
+                        continue;
+                    }
+                    try {
+                        let div = document.createElement('div');
+                        let title = document.getElementById("title");
+                        let month = document.getElementById("month");
+                        let day = document.getElementById("day");
+                        let time = document.getElementById("time");
+                        let desc = document.getElementById("desc");
+                        div.className = 'column';
+
+                        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset[i].title).replace('{{month}}', months[new Date(dataset[i].date).getUTCMonth()]).replace('{{day}}', new Date(dataset[i].date).getUTCDate()).replace('{{time}}', dataset[i].time).replace('{{desc}}', dataset[i].description);
+                        document.getElementById('items').appendChild(div);
+
+                        current += 1;
+                        i += 1;
+                        
+                    } catch {
+                        continue;
+                        
+                    }
+                }
+            }
+
+            function loadMoreData() {
+                btnText = document.getElementById("loadMore");
+                btnText.innerHTML = "All caught up!";
+                btnText.disabled = "true";
+
+                let template = document.getElementById('template');
+                while (i < dataset.length) {
+                    if (new Date(dataset[i].date) < new Date()) {
+                        i += 1;
+                        continue;
+                    }
+                    try {
+                        let div = document.createElement('div');
+                        let title = document.getElementById("title");
+                        let month = document.getElementById("month");
+                        let day = document.getElementById("day");
+                        let time = document.getElementById("time");
+                        let desc = document.getElementById("desc");
+                        div.className = 'column';
+
+                        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset[i].title).replace('{{month}}', months[new Date(dataset[i].date).getUTCMonth()]).replace('{{day}}', new Date(dataset[i].date).getUTCDate()).replace('{{time}}', dataset[i].time).replace('{{desc}}', dataset[i].description);
+                        document.getElementById('items').appendChild(div);
+
+                        i++;
+                    } catch {
+                        continue;
+                    }
+                }
+
+
+            }
+
+            loadData()
+        </script>
+
+        <!-- MERCH -->
+        <section class="group section container">
+            <div class="group-bg">
+                <h2 class="section-title-center group-title">
+                    Our Merch
+                </h2>
+
+                <div class="group-container grid">
+                    <div class="group-card">
+                        <div name="qzip" class="group-card-number">
+                            <img src="assets/img/IMG_5729__1_-removebg-preview.png" style="width:100%">
+                        </div>
+
+                        <h3 class="group-card-title">Quarter-Zip</h3>
+                        <p class="group-card-description">
+                            Available in White and Black
+                        </p>
+                    </div>
+
+                    <div class="group-card">
+                        <div name="qzip" class="group-card-number">
+                            <img src="assets/img/IMG_5729__2_-removebg-preview.png" style="width:100%">
+                        </div>
+
+                        <h3 class="group-card-title">Quarter-Zip</h3>
+                        <p class="group-card-description">
+                            Available in White and Black
+                        </p>
+                    </div>
+
+                    <div class="group-card">
+                        <div name="sweaterw" class="group-card-number fade">
+                            <img src="assets/img/IMG_5728__3_-removebg-preview.png" style="width:100%">
+                        </div>
+
+                        <div name="sweaterw" class="group-card-number fade">
+                            <img src="assets/img/IMG_5728__4_-removebg-preview.png" style="width:100%">
+                        </div>
+                        <div style="text-align:center; opacity: 0;">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <h3 class="group-card-title">Sweater</h3>
+                        <p class="group-card-description">
+                            Available in White and Black
+                        </p>
+                    </div>
+
+                    <div class="group-card">
+                        <div name="sweaterb" class="group-card-number fade">
+                            <img src="assets/img/IMG_5728__1_-removebg-preview.png" style="width:100%">
+                        </div>
+
+                        <div name="sweaterb" class="group-card-number fade">
+                            <img src="assets/img/IMG_5728__2_-removebg-preview.png" style="width:100%">
+                        </div>
+
+                        <div style="text-align:center; opacity: 0;">
+                            <span class="dot2"></span>
+                            <span class="dot2"></span>
+                            <span class="dot2"></span>
+                            <span class="dot2"></span>
+                        </div>
+
+                        <h3 class="group-card-title">Sweater</h3>
+                        <p class="group-card-description">
+                            Available in White and Black
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            let slideIndex = 0;
+
+            showSlides();
+            let slideIndex2 = 0;
+            showSlides2();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByName("sweaterw");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 4000); // Change image every 2 seconds
+            }
+
+            function showSlides2() {
+                let i;
+                let slides = document.getElementsByName("sweaterb");
+                let dots = document.getElementsByClassName("dot2");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex2++;
+                if (slideIndex2 > slides.length) { slideIndex2 = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex2 - 1].style.display = "block";
+                dots[slideIndex2 - 1].className += " active";
+                setTimeout(showSlides2, 4000); // Change image every 2 seconds
+            }
+        </script>
+        <!-- Gallery -->
+        <section class="highlights section container" id="highlightss">
+            <h2 class="section-title-center">
+                This Year's Highlights
+            </h2>
+
+            <div class="highlights-container grid">
+                <article class="highlights-card">
+                    <div class="highlights-circle"></div>
+
+                    <img src="assets/img/DSCF9432 (1).jpg" alt="" class="highlights-img">
+                </article>
+
+                <article class="highlights-card">
+                    <div class="highlights-circle"></div>
+
+                    <img src="assets/img/DSC05539 (1).jpg" alt="" class="highlights-img">
+                </article>
+
+                <article class="highlights-card">
+                    <div class="highlights-circle"></div>
+
+                    <img src="assets/img/Copy of IMG_9749 (1).jpg" alt="" class="highlights-img">
+
+                </article>
+
+                <article class="highlights-card">
+                    <div class="highlights-circle"></div>
+
+                    <img src="assets/img/DSCF2294 (3) (1).jpg" alt="" class="highlights-img">
+
+                </article>
+
+                <article class="highlights-card">
+                    <div class="highlights-circle"></div>
+
+                    <img src="assets/img/IMG_0214 (1).jpg" alt="" class="highlights-img">
+
+                </article>
+
+                <article class="highlights-card">
+                    <div class="highlights-circle"></div>
+
+                    <img src="assets/img/DSC_0418 (1).jpg" alt="" class="highlights-img">
+                </article>
+            </div>
+        </section>
+
+        <!-- QUESTIONS -->
+        <section class="group section container">
+            <div class="group-bg">
+                <h2 class="section-title-center">
+                    Frequently <br> Asked Questions
+                </h2>
+
+                <div class="questions-container container grid">
+                    <div class="questions-group">
+                        <div class="questions-item">
+                            <header class="questions-header">
+                                <i class="ri-add-line questions-icon"></i>
+                                <h3 class="questions-item-title">
+                                    What is StuCo?
+                                </h3>
+                            </header>
+
+                            <div class="questions-content">
+                                <p class="questions-description">
+                                    At Bayview, Student Council is a democratically elected governing council of the student
+                                    body.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions-item">
+                            <header class="questions-header">
+                                <i class="ri-add-line questions-icon"></i>
+                                <h3 class="questions-item-title">
+                                    What does StuCo do?
+                                </h3>
+                            </header>
+
+                            <div class="questions-content">
+                                <p class="questions-description">
+                                    We're in charge of: <br>
+                                    • Managing all clubs, including finances and scheduling<br>
+                                    • Assisting in school advertisement (announcements, google classroom grade forums)<br>
+                                    • Planning school events, such as Spirit Events, to raise and enhance school spirit<br>
+                                    • Promote student activity and voice
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="questions-group">
+                        <div class="questions-item">
+                            <header class="questions-header">
+                                <i class="ri-add-line questions-icon"></i>
+                                <h3 class="questions-item-title">
+                                    How often does StuCo meet?
+                                </h3>
+                            </header>
+
+                            <div class="questions-content">
+                                <p class="questions-description">
+                                    Weekly on Wednesdays
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions-item">
+                            <header class="questions-header">
+                                <i class="ri-add-line questions-icon"></i>
+                                <h3 class="questions-item-title">
+                                    How do I run for StuCo?
+                                </h3>
+                            </header>
+
+                            <div class="questions-content">
+                                <p class="questions-description">
+                                    When election season comes around in May, join your grade Google Classroom and look for the application link!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- LOCATION -->
+        <section class="group section container">
+            <h2 class="section-title-center group-title">
+                Location
+            </h2>
+            <div class="group-card">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=10077%20Bayview%20Ave,%20Richmond%20Hill,%20ON%20L4C%202L4&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                            href="https://www.whatismyip-address.com"></a><br>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                                text-align: right;
+                                height: 500px;
+                                width: 100%;
+                            }
+                        </style><a href="https://www.embedgooglemap.net"></a>
+                        <style>
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 500px;
+                                width: 100%;
+                            }
+                        </style>
+                    </div>
+                </div>
+                <br>
+                <h3 class="group-card-description" style="text-align: center;">10077 Bayview Ave, Richmond Hill, ON L4C
+                    2L4</h3>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer section">
+        <div class="footer-container container grid group-bg">
+
+
+            <div class="footer-content">
+                <h2 class="footer-title">Find Us Here!</h2>
+
+
+                <ul class="footer-data">
+                    <div class="footer-social">
+                        <button onclick="window.open('https://www.instagram.com/bayviewstuco/','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-instagram-line"></i>
+                        </button>
+                        <button onclick="window.open('mailto:stuco.bayview@gmail.com','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-mail-line"></i>
+                        </button>
+                        <button
+                            onclick="window.open('https://www.youtube.com/channel/UCiCdad-uRRaBZKScErpSaPQ/videos','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-youtube-line"></i>
+                        </button>
+                        <button
+                            onclick="window.open('https://www.facebook.com/BayviewStuCo/','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-facebook-line"></i>
+                        </button>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h2 class="footer-title">Resources</h2>
+
+
+                <ul class="footer-data">
+                    <div class="footer-social">
+                        <button onclick="window.open('http://ta.yrdsb.ca/','_blank')" class="btn draw-border">
+                            <i></i>TeachAssist
+                        </button>
+                        <button onclick="window.open('https://app.myblueprint.ca/','_blank')" class="btn draw-border">
+                            <i></i>MyBlueprint
+                        </button>
+                        <button onclick="window.open('https://yrdsb.schoolcashonline.com','_blank')"
+                            class="btn draw-border">
+                            <i></i>SchoolCashOnline
+                        </button>
+                        <button onclick="window.open('https://yrdsb.edsby.com/','_blank')" class="btn draw-border">
+                            <i></i>Edsby
+                        </button>
+                    </div>
+                </ul>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup-icon"></i>
+    </a>
+
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        let easeOut = [{ animation: "ease-out" }];
+
+        window.onload = function() {       
+            setTimeout(function(){
+                $('#loading').slideUp(1500, "swing");
+            },2000); 
+        }
+        
+    </script>
+</body>
+
+</html>
