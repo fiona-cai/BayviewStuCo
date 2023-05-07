@@ -109,15 +109,17 @@ img {
 	backdrop-filter: blur(12px);
 	z-index: 101;
 	align-self: center;
-	padding: 20vh 20%;
+	padding: 30vh 20% 0 20%;
 }
 
-#loading-image, .lds-default {
+#loading-image,
+.lds-default {
 	z-index: 102;
 	display: block;
 	margin: auto;
-	width: 50%;
+	width: 60%;
 }
+
 
 .group-bg,
 .questions {
@@ -216,6 +218,22 @@ img {
 	display: inline-flex;
 	font-size: 1.25rem;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+	.nav-menu {
+		position: fixed;
+		background-color: var(--first-color-dark);
+		width: 60vw;
+		height: 100vh;
+		top: 0;
+		right: -120vw;
+		padding: 4rem 0 0 0rem;
+		border-radius: 1rem 0 0 1rem;
+		transition: .3s;
+		z-index: var(--z-fixed);
+		text-align: center;
+	}
 }
 
 .nav-close {
@@ -867,24 +885,6 @@ button:hover {
 	}
 }
 
-@media screen and (max-width: 767px) {
-	.nav-menu {
-		position: fixed;
-		background-color: var(--container-color);
-		height: 100%;
-		top: 0;
-		right: -100%;
-		box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, .1);
-		padding: 4rem 0 0 3rem;
-		border-radius: 1rem 0 0 1rem;
-		transition: .3s;
-		z-index: var(--z-fixed);
-		height: 100vh;
-		width: 100%;
-		font-size: var(--h2-font-size);
-	}
-}
-
 @media screen and (max-width: 320px) {
 	.container {
 		margin-left: var(--mb-1);
@@ -1304,8 +1304,7 @@ button:hover {
 		stroke-dashoffset: 4000;
 	}
 
-	50% {
-	}
+	50% {}
 
 	100% {
 		stroke-dashoffset: 0;
