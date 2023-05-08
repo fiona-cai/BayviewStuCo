@@ -74,7 +74,7 @@ var dataset = [
     {
         title: 'Art Night',
         date: "2023-05-25",
-        time: "TBD",
-        description: "5:30pm-7:30pm",
+        time: "5:30pm-7:30pm",
+        description: "",
     },
 ];
