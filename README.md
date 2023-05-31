@@ -1,4 +1,4 @@
 # BayviewStuCo
 2022-2023
 
-[https://www.bayviewstuco.ca/](Visit the site)
+[Visit the site](https://www.bayviewstuco.ca/)
