@@ -565,8 +565,19 @@
 
     <script>
         let easeOut = [{ animation: "ease-out" }];
+        
+
+
 
         window.onload = function() {       
+            if (!sessionStorage.getItem('shown')) {
+                sessionStorage.setItem('shown', true);
+                showScreen();
+            }
+            
+        }
+        
+        function showScreen() {
             setTimeout(function(){
                 $('#loading').slideUp(1500, "swing");
             },100); 
