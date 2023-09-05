@@ -32,7 +32,7 @@
                         <a href="../" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./events" class="nav-link active-link" ;>Events</a>
+                        <a href="./events" class="nav-link active-link">Events</a>
                     </li>
                     <li class="nav-item">
                         <a href="./gallery" class="nav-link">Gallery</a>
@@ -125,41 +125,7 @@
                 </div>
 
             </div>
-            <div class="event-container2 container grid">
-
-                <h3 class="vertical">Past Events</h3>
-
-                <template id='template2'>
-                    <div class="event">
-                        <div class="event-left">
-                            <div class="event-date">
-                                <div class="date">{{day}}</div>
-                                <div class="month">{{month}}</div>
-                            </div>
-                        </div>
-                        <div class="event-right">
-                            <h3 class="event-title">{{title}}</h3>
-
-                            <div class="event-description">
-                                {{desc}}
-                            </div>
-
-                            <div class="event-timing">
-                                <img src="assets/img/time.png" alt="" /> {{time}}
-                            </div>
-                        </div>
-                    </div>
-                </template>
-
-                <div>
-                    <div id="items2" style="max-width: 100%;"></div>
-                    <button id="loadMorePast" onclick="loadMorePastData()">
-                        <span>Load More</span>
-                    </button>
-                </div>
-
-                
-            </div>
+            
         </div>
         <script src="assets/js/articles.js"></script>
         <script>
@@ -233,18 +199,57 @@
 
             loadData()
 
+            
             </script>
+            <div class="event-container1">
+
+            <div class="event-container2 container grid">
+
+                <h3 class="vertical">Past Events</h3>
+
+                <template id='template2'>
+                    <div class="event">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">{{day}}</div>
+                                <div class="month">{{month}}</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">{{title}}</h3>
+
+                            <div class="event-description">
+                                {{desc}}
+                            </div>
+
+                            <div class="event-timing">
+                                <img src="assets/img/time.png" alt="" /> {{time}}
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <div>
+                    <div id="items2" style="max-width: 100%;"></div>
+                    <button id="loadMorePast" onclick="loadMorePastData()">
+                        <span>Load More</span>
+                    </button>
+                </div>
+
+                
+            </div>
             <script src="assets/js/articles.js"></script>
 
             <script>
             var current2 = 0;
             var j = 0
-            dataset.sort((a, b) => new Date(b.date) - new Date(a.date));
+            var dataset2 = JSON.parse(JSON.stringify(dataset));
+            dataset2.sort((a, b) => new Date(b.date) - new Date(a.date));
             function loadPastData() {
                 let template = document.getElementById('template2');
                 
                 while (current2 < 4) {
-                    if (new Date(dataset[j].date) >= new Date()) {
+                    if (new Date(dataset2[j].date) >= new Date()) {
                         j += 1;
                         continue;
                     }
@@ -258,7 +263,7 @@
                         div.className = 'column';
 
                         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset[j].title).replace('{{month}}', months[new Date(dataset[j].date).getUTCMonth()]).replace('{{day}}', new Date(dataset[j].date).getUTCDate()).replace('{{time}}', dataset[j].time).replace('{{desc}}', dataset[j].description);
+                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset2[j].title).replace('{{month}}', months[new Date(dataset2[j].date).getUTCMonth()]).replace('{{day}}', new Date(dataset2[j].date).getUTCDate()).replace('{{time}}', dataset2[j].time).replace('{{desc}}', dataset2[j].description);
                         document.getElementById('items2').appendChild(div);
 
                         current2 += 1;
@@ -277,8 +282,8 @@
                 btnText.disabled = "true";
 
                 let template = document.getElementById('template2');
-                while (j < dataset.length) {
-                    if (new Date(dataset[j].date) >= new Date()) {
+                while (j < dataset2.length) {
+                    if (new Date(dataset2[j].date) >= new Date()) {
                         j += 1;
                         continue;
                     }
@@ -292,7 +297,7 @@
                         div.className = 'column';
 
                         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset[j].title).replace('{{month}}', months[new Date(dataset[j].date).getUTCMonth()]).replace('{{day}}', new Date(dataset[j].date).getUTCDate()).replace('{{time}}', dataset[j].time).replace('{{desc}}', dataset[j].description);
+                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset2[j].title).replace('{{month}}', months[new Date(dataset2[j].date).getUTCMonth()]).replace('{{day}}', new Date(dataset2[j].date).getUTCDate()).replace('{{time}}', dataset2[j].time).replace('{{desc}}', dataset2[j].description);
                         document.getElementById('items2').appendChild(div);
 
                         j++;
