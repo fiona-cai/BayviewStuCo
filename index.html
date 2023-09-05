@@ -573,6 +573,10 @@
             if (!sessionStorage.getItem('shown')) {
                 sessionStorage.setItem('shown', true);
                 showScreen();
+            } else {
+                setTimeout(function(){
+                $('#loading').slideUp(0, "swing");
+            },0); 
             }
             
         }
