@@ -127,7 +127,7 @@ var dataset = [
     },
     {
         title: 'Bayview DECA Kickoff',
-        date: "2023-09-16",
+        date: "2023-09-07",
         time: "3:30pm-5:00pm",
         description: "",
     },
