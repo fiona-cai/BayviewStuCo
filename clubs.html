@@ -18,6 +18,11 @@
 </head>
 
 <body class="dark-theme">
+    <!-- LOADER -->
+    <div id="loading">
+        <img id="breathing" src="assets/img/ombre_logo.png" >
+        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
     <!-- NAV BAR -->
     <header class="header" id="header">
         <nav class="nav container">
@@ -101,6 +106,31 @@
     <script src="assets/js/scrollreveal.min.js"></script>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        let easeOut = [{ animation: "ease-out" }];
+        
+
+
+
+        window.onload = function() {       
+            if (!sessionStorage.getItem('shown')) {
+                sessionStorage.setItem('shown', true);
+                showScreen();
+            } else {
+                setTimeout(function(){
+                $('#loading').hide();
+            },1); 
+            }
+            
+        }
+        
+        function showScreen() {
+            setTimeout(function(){
+                $('#loading').slideUp(1500, "swing");
+            },100); 
+        }
+        
+    </script>
 </body>
 
 </html>
