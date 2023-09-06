@@ -131,10 +131,4 @@ var dataset = [
         time: "3:30pm-5:00pm",
         description: "",
     },
-    {
-        title: 'DECA Regionals',
-        date: "2023-11-12",
-        time: "TBD",
-        description: "",
-    },
 ];
