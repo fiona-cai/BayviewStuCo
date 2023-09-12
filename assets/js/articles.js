@@ -131,4 +131,10 @@ var dataset = [
         time: "3:30pm-5:00pm",
         description: "",
     },
+    {
+        title: 'Grade 9 Rep Election Info',
+        date: "2023-09-14",
+        time: "3:30pm-4:00pm",
+        description: "Cafeteria",
+    },
 ];
