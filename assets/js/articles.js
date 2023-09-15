@@ -137,4 +137,10 @@ var dataset = [
         time: "3:30pm-4:00pm",
         description: "Cafeteria",
     },
+    {
+        title: 'Club Fair',
+        date: "2023-09-28",
+        time: "3:30pm-4:30pm",
+        description: "Cafeteria + Gym",
+    },
 ];
