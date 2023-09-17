@@ -1,7 +1,7 @@
 var dataset = [
     {
         title: 'World Autism Awareness Day',
-        date: "2023-04-03",
+        date: "2023/04/03",
         time: "All day",
         description: "",
     },
