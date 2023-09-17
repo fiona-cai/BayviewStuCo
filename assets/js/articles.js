@@ -143,4 +143,22 @@ var dataset = [
         time: "3:30pm-4:30pm",
         description: "Cafeteria + Gym",
     },
+    {
+        "title": "HOSA Kickoff",
+        "description": "Cafeteria - Information session and promotion event for students interested in joining HOSA.",
+        "date": "9/19/2023",
+        "time": "3:30pm-4:30pm"
+    },
+    {
+        "title": "FBLA Chapter kickoff",
+        "description": "Cafeteria - Annual chapter kickoff where our executives will be doing a presentation on a breakdown of what FBLA is as a club. ",
+        "date": "9/13/2023",
+        "time": "3:30pm-4:30pm"
+    },
+    {
+        "title": "Robotics Kickoff",
+        "description": "Cafeteria - A kick off event to introduce Bayview about Bayview Robotics! This includes our goals and plans for the year, in addition we're hoping to do live robotic demos!",
+        "date": "9/18/2023",
+        "time": "3:30pm-4:30pm"
+    },
 ];
