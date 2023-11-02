@@ -159,7 +159,7 @@ svg {
 /*Paper Plane: Container*/
 .plane-container {
   width: 20vw;
-  margin: 50px auto;
+  margin: 100px auto;
   z-index: 3;
   position: absolute;
 }
