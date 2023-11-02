@@ -146,85 +146,85 @@ var dataset = [
     {
         title: "HOSA Kickoff",
         description: "Cafeteria - Information session and promotion event for students interested in joining HOSA.",
-        "date": "9/19/2023",
+        "date": "2023-09-19",
         "time": "3:30pm-4:30pm"
     },
     {
         title: "FBLA Chapter kickoff",
         description: "Cafeteria - Annual chapter kickoff where our executives will be doing a presentation on a breakdown of what FBLA is as a club. ",
-        date: "9/13/2023",
+        date: "2023-09-13",
         time: "3:30pm-4:30pm"
     },
     {
         title: "Robotics Kickoff",
         description: "Cafeteria - A kick off event to introduce Bayview about Bayview Robotics! This includes our goals and plans for the year, in addition we're hoping to do live robotic demos!",
-        date: "9/18/2023",
+        date: "2023-09-18",
         time: "3:30pm-4:30pm"
     },
     {
         title: "Merch Deadline",
         description: "Buy our 2023-2024 merch on School Cash Online",
-        date: "11/30/2023",
+        date: "2023-11-30",
         time: "All day"
     },
     {
         title: "Talent Show",
         description: "Annual winter talent show right before winter break",
-        date: "12/22/2023",
+        date: "2023-12-22",
         time: "Buy-in Period 5"
     },
     {
         title: "Rememberance Day",
         description: "",
-        date: "11/11/2023",
+        date: "2023-11-11",
         time: "Period 1 and Period 2"
     },
     {
         title: "Vacation Wednesday - Semi Spirit Week",
         description: "Show off your school spirit!",
-        date: "11/15/2023",
+        date: "2023-11-15",
         time: "All day"
     },
     {
         title: "Anything But A Backpack Tuesday - Semi Spirit Week",
         description: "Show off your school spirit!",
-        date: "11/14/2023",
+        date: "2023-11-14",
         time: "All day"
     },
     {
         title: "Comfy Clothes Monday - Semi Spirit Week",
         description: "Show off your school spirit!",
-        date: "11/13/2023",
+        date: "2023-11-13",
         time: "All day"
     },
     {
         title: "Monday: Meme Day - Spirit Week",
         description: "Show off your school spirit!",
-        date: "12/18/2023",
+        date: "2023-12-18",
         time: "All day"
     },
     {
         title: "Tuesday: Jersey Day - Spirit Week",
         description: "Show off your school spirit!",
-        date: "12/19/2023",
+        date: "2023-12-19",
         time: "All day"
     },
     {
         title: "On Wednesday's We Wear Pink Day - Spirit Week",
         description: "Show off your school spirit!",
-        date: "12/20/2023",
+        date: "2023-12-20",
         time: "All day"
     },
     {
         title: "Thursday: Ugly Sweater's Day - Spirit Week",
         description: "Show off your school spirit!",
-        date: "12/21/2023",
+        date: "2023-12-21",
         time: "All day"
     },
     {
         title: "Friday: Pajama Day - Spirit Week",
         description: "Show off your school spirit!",
-        date: "12/22/2023",
+        date: "2023-12-22",
         time: "All day"
     },
 ];
