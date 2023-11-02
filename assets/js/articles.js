@@ -161,4 +161,70 @@ var dataset = [
         date: "9/18/2023",
         time: "3:30pm-4:30pm"
     },
+    {
+        title: "Merch Deadline",
+        description: "Buy our 2023-2024 merch on School Cash Online",
+        date: "11/30/2023",
+        time: "All day"
+    },
+    {
+        title: "Talent Show",
+        description: "Annual winter talent show right before winter break",
+        date: "12/22/2023",
+        time: "Buy-in Period 5"
+    },
+    {
+        title: "Rememberance Day",
+        description: "",
+        date: "11/11/2023",
+        time: "Period 1 and Period 2"
+    },
+    {
+        title: "Vacation Wednesday - Semi Spirit Week",
+        description: "Show off your school spirit!",
+        date: "11/15/2023",
+        time: "All day"
+    },
+    {
+        title: "Anything But A Backpack Tuesday - Semi Spirit Week",
+        description: "Show off your school spirit!",
+        date: "11/14/2023",
+        time: "All day"
+    },
+    {
+        title: "Comfy Clothes Monday - Semi Spirit Week",
+        description: "Show off your school spirit!",
+        date: "11/13/2023",
+        time: "All day"
+    },
+    {
+        title: "Monday: Meme Day - Spirit Week",
+        description: "Show off your school spirit!",
+        date: "12/18/2023",
+        time: "All day"
+    },
+    {
+        title: "Tuesday: Jersey Day - Spirit Week",
+        description: "Show off your school spirit!",
+        date: "12/19/2023",
+        time: "All day"
+    },
+    {
+        title: "On Wednesday's We Wear Pink Day - Spirit Week",
+        description: "Show off your school spirit!",
+        date: "12/20/2023",
+        time: "All day"
+    },
+    {
+        title: "Thursday: Ugly Sweater's Day - Spirit Week",
+        description: "Show off your school spirit!",
+        date: "12/21/2023",
+        time: "All day"
+    },
+    {
+        title: "Friday: Pajama Day - Spirit Week",
+        description: "Show off your school spirit!",
+        date: "12/22/2023",
+        time: "All day"
+    },
 ];
