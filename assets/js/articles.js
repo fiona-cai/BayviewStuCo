@@ -227,4 +227,28 @@ var dataset = [
         date: "2023-12-22",
         time: "All day"
     },
+    {
+        title: "Kindness Cocoa",
+        description: "Free hot chocolate in the Cafeteria",
+        date: "2024-01-19",
+        time: "P 2,3,4"
+    },
+    {
+        title: "MYSTERY",
+        description: "🐇🐇🐇",
+        date: "2024-04-01",
+        time: "All day"
+    },
+    {
+        title: "Prom",
+        description: "Details coming soon.",
+        date: "2024-06-06",
+        time: "4:30pm-11:30pm"
+    },
+    {
+        title: "Graduation",
+        description: "Details coming soon.",
+        date: "2024-06-26",
+        time: "All Day"
+    },
 ];
