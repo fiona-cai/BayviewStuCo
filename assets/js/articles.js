@@ -251,4 +251,16 @@ var dataset = [
         date: "2024-06-26",
         time: "All Day"
     },
+    {
+        title: "Last Day of School",
+        description: "Exam Review Day",
+        date: "2024-06-26",
+        time: "All Day"
+    },
+    {
+        title: "Semester 2 Exams Begin",
+        description: "Details coming soon.",
+        date: "2024-06-19",
+        time: "All Day"
+    },
 ];
