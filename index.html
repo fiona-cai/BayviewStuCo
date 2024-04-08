@@ -169,20 +169,23 @@
         <!-- EASTER -->
         <section class="group section container">
             <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
-                <div style="align-items: center; width: 100%;" id="inputArea" >
-                    <h2 class="section-title-center group-title" style="">
+                <h2 class="section-title-center group-title" style="">
                     Egg Hunt
                 </h2>
+                <p>If you seek the egg, listen to me: the clues that will take you to the end are anywhere and everywhere.</p>
+
+                <div style="align-items: center; width: 100%; padding:1%" id="inputArea" >
+                    
 
                 
 
-                    <input type="text" style="width: 100%; padding: 5%; font-size: 42px;" id="code" placeholder="Enter today's code">
+                    <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 10vw; text-indent:10vw; " id="code" placeholder="000">
                 
                 </div>
                 
 
-                <p id="message"></p>
-                <button style="align-self: center;" onclick="checkCode()">Submit</button>
+                <p style="padding: 2%;" id="message"></p>
+                <button style="align-self: center;" id="egg" onclick="checkCode()">Submit</button>
 
                 <script>
                 function checkCode() {
@@ -191,8 +194,9 @@
       var inputArea = document.getElementById("inputArea");
       
       if (code == "132") {
-        message.innerHTML = "4 days left. The first number is 9.";
+        message.innerHTML = "4 days left. <b> The first number is 9 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
         inputArea.style.display = "none";
+        egg.style.display = "none";
       } else {
         message.innerHTML = "Incorrect sequence, please try again.";
       }
