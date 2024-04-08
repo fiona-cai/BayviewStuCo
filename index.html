@@ -168,9 +168,42 @@
         </div>
         <!-- EASTER -->
         <section class="group section container">
-            <div class="group-bg">
-                <div class="container" id="ff-compose"></div>
-                <script async defer src="https://formfacade.com/include/109180203128418014727/form/1FAIpQLSf9Cw-L8CUwIosQRl1JmE5b_dTCMgvNUwsM7YmKZdo2fNoDmg/bootstrap.js?div=ff-compose"></script>
+            <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
+                <div style="align-items: center; width: 100%;" id="inputArea" >
+                    <h2 class="section-title-center group-title" style="">
+                    Egg Hunt
+                </h2>
+
+                
+
+                    <input type="text" style="width: 100%; padding: 5%; font-size: 42px;" id="code" placeholder="Enter today's code">
+                
+                </div>
+                
+
+                <p id="message"></p>
+                <button style="align-self: center;" onclick="checkCode()">Submit</button>
+
+                <script>
+                function checkCode() {
+      var code = document.getElementById("code").value;
+      var message = document.getElementById("message");
+      var inputArea = document.getElementById("inputArea");
+      
+      if (code == "132") {
+        message.innerHTML = "4 days left. The first number is 9.";
+        inputArea.style.display = "none";
+      } else {
+        message.innerHTML = "Incorrect sequence, please try again.";
+      }
+    }
+                </script>
+                </div>
+
+
+                
+
+
             </div>
         </section>
  <!-- EVENTS -->
