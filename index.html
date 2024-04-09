@@ -170,35 +170,79 @@
         <section class="group section container">
             <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
                 <h2 class="section-title-center group-title" style="">
-                    Egg Hunt
+                    Egg Hunt (Day 2)
                 </h2>
                 <p>If you seek the egg, listen to me: the clues that will take you to the end are anywhere and everywhere.</p>
 
-                <div style="align-items: center; width: 100%; padding:1%" id="inputArea" >
+                <div style="align-items: center; width: 100%; padding:1%" id="inputArea2" >
                     
 
                 
 
-                    <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 1vw; text-indent:1vw; " id="code" placeholder="abcdefghi">
+                    <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 1vw; text-indent:1vw; " id="code2" placeholder="abcdefghi">
                 
                 </div>
                 
 
-                <p style="padding: 2%;" id="message">Today's code is a CAPTCHA code</p>
-                <button style="align-self: center;" id="egg" onclick="checkCode()">Submit</button>
+                <p style="padding: 2%;" id="message2">Today's code is a CAPTCHA code</p>
+                <button style="align-self: center;" id="egg" onclick="checkCode2()">Submit</button>
 
                 <script>
-                function checkCode() {
-      var code = document.getElementById("code").value;
-      var message = document.getElementById("message");
-      var inputArea = document.getElementById("inputArea");
+                function checkCode2() {
+      var code2 = document.getElementById("code2").value;
+      var message2 = document.getElementById("message2");
+      var inputArea = document.getElementById("inputArea2");
       
-      if (code == "hounbecal") {
-        message.innerHTML = "3 days left. <b> The second is 4 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
+      if (code2 == "hounbecal") {
+        message2.innerHTML = "3 days left. <b> The second is 4 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
         inputArea.style.display = "none";
         egg.style.display = "none";
       } else {
-        message.innerHTML = "Incorrect sequence, please try again.";
+        message2.innerHTML = "Incorrect sequence, please try again.";
+      }
+    }
+                </script>
+                </div>
+
+
+                
+
+
+            </div>
+        </section>
+
+        <section class="group section container">
+            <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
+                <h2 class="section-title-center group-title" style="">
+                    Egg Hunt (Day 1)
+                </h2>
+                <p>If you seek the egg, listen to me: the clues that will take you to the end are anywhere and everywhere.</p>
+
+                <div style="align-items: center; width: 100%; padding:1%" id="inputArea1" >
+                    
+
+                
+
+                    <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 10vw; text-indent:10vw; " id="code1" placeholder="000">
+                
+                </div>
+                
+
+                <p style="padding: 2%;" id="message1">Today's code is a 3 digit number</p>
+                <button style="align-self: center;" id="egg" onclick="checkCode1()">Submit</button>
+
+                <script>
+                function checkCode1() {
+      var code1 = document.getElementById("code1").value;
+      var message1 = document.getElementById("message1");
+      var inputArea1 = document.getElementById("inputArea1");
+      
+      if (code1 == "132") {
+        message1.innerHTML = "4 days left. <b> The first number is 9 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
+        inputArea1.style.display = "none";
+        egg.style.display = "none";
+      } else {
+        message1.innerHTML = "Incorrect sequence, please try again.";
       }
     }
                 </script>
