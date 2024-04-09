@@ -49,7 +49,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="./clubs" class="nav-link">Clubs</a>
+                        <a href="./archive" class="nav-link">Archive</a>
                     </li>
 
                     <li class="nav-item">
@@ -167,6 +167,7 @@
             
         </div>
         <!-- EASTER -->
+
         <section class="group section container">
             <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
                 <h2 class="section-title-center group-title" style="">
@@ -211,49 +212,9 @@
             </div>
         </section>
 
-        <section class="group section container">
-            <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
-                <h2 class="section-title-center group-title" style="">
-                    Egg Hunt (Day 1)
-                </h2>
-                <p>If you seek the egg, listen to me: the clues that will take you to the end are anywhere and everywhere.</p>
-
-                <div style="align-items: center; width: 100%; padding:1%" id="inputArea1" >
-                    
-
-                
-
-                    <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 10vw; text-indent:10vw; " id="code1" placeholder="000">
-                
-                </div>
-                
-
-                <p style="padding: 2%;" id="message1">Today's code is a 3 digit number</p>
-                <button style="align-self: center;" id="egg" onclick="checkCode1()">Submit</button>
-
-                <script>
-                function checkCode1() {
-      var code1 = document.getElementById("code1").value;
-      var message1 = document.getElementById("message1");
-      var inputArea1 = document.getElementById("inputArea1");
-      
-      if (code1 == "132") {
-        message1.innerHTML = "4 days left. <b> The first number is 9 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
-        inputArea1.style.display = "none";
-        egg.style.display = "none";
-      } else {
-        message1.innerHTML = "Incorrect sequence, please try again.";
-      }
-    }
-                </script>
-                </div>
-
-
-                
-
-
-            </div>
-        </section>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <button onclick="window.location.href = 'archive.html'">Go to Archive</button>
+        </div>
  <!-- EVENTS -->
         <div class="event-container1">
             <h3>Upcoming Events</h3>
@@ -368,119 +329,6 @@
             loadData()
         </script>
 
-        <!-- MERCH -->
-        <section class="group section container">
-            <div class="group-bg">
-                <h2 class="section-title-center group-title">
-                    Our Merch
-                </h2>
-
-                <div class="group-container grid">
-                    <div class="group-card">
-                        <div name="qzip" class="group-card-number">
-                            <img src="assets/img/IMG_5729__1_-removebg-preview.png" style="width:100%">
-                        </div>
-
-                        <h3 class="group-card-title">Quarter-Zip</h3>
-                        <p class="group-card-description">
-                            Available in White and Black
-                        </p>
-                    </div>
-
-                    <div class="group-card">
-                        <div name="qzip" class="group-card-number">
-                            <img src="assets/img/IMG_5729__2_-removebg-preview.png" style="width:100%">
-                        </div>
-
-                        <h3 class="group-card-title">Quarter-Zip</h3>
-                        <p class="group-card-description">
-                            Available in White and Black
-                        </p>
-                    </div>
-
-                    <div class="group-card">
-                        <div name="sweaterw" class="group-card-number fade">
-                            <img src="assets/img/IMG_5728__3_-removebg-preview.png" style="width:100%">
-                        </div>
-
-                        <div name="sweaterw" class="group-card-number fade">
-                            <img src="assets/img/IMG_5728__4_-removebg-preview.png" style="width:100%">
-                        </div>
-                        <div style="text-align:center; opacity: 0;">
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                        <h3 class="group-card-title">Sweater</h3>
-                        <p class="group-card-description">
-                            Available in White and Black
-                        </p>
-                    </div>
-
-                    <div class="group-card">
-                        <div name="sweaterb" class="group-card-number fade">
-                            <img src="assets/img/IMG_5728__1_-removebg-preview.png" style="width:100%">
-                        </div>
-
-                        <div name="sweaterb" class="group-card-number fade">
-                            <img src="assets/img/IMG_5728__2_-removebg-preview.png" style="width:100%">
-                        </div>
-
-                        <div style="text-align:center; opacity: 0;">
-                            <span class="dot2"></span>
-                            <span class="dot2"></span>
-                            <span class="dot2"></span>
-                            <span class="dot2"></span>
-                        </div>
-
-                        <h3 class="group-card-title">Sweater</h3>
-                        <p class="group-card-description">
-                            Available in White and Black
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <script>
-            let slideIndex = 0;
-
-            showSlides();
-            let slideIndex2 = 0;
-            showSlides2();
-
-            function showSlides() {
-                let i;
-                let slides = document.getElementsByName("sweaterw");
-                let dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1 }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 4000); // Change image every 2 seconds
-            }
-
-            function showSlides2() {
-                let i;
-                let slides = document.getElementsByName("sweaterb");
-                let dots = document.getElementsByClassName("dot2");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex2++;
-                if (slideIndex2 > slides.length) { slideIndex2 = 1 }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex2 - 1].style.display = "block";
-                dots[slideIndex2 - 1].className += " active";
-                setTimeout(showSlides2, 4000); // Change image every 2 seconds
-            }
-        </script>
         <!-- Gallery -->
         <section class="highlights section container" id="highlightss">
             <h2 class="section-title-center">

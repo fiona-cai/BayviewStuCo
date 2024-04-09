@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-
     <link rel="stylesheet" href="assets/css/logo.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -18,7 +16,8 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
     crossorigin="anonymous"></script>
-    <title>Map | Bayview StuCo</title>
+
+    <title>Puzzles Archive | Bayview StuCo</title>
 
 </head>
 
@@ -48,11 +47,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="./archive" class="nav-link">Archive</a>
+                        <a href="./archive" class="nav-link active-link">Archive</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="./map" class="nav-link active-link">Map</a>
+                        <a href="./map" class="nav-link">Map</a>
                     </li>
                 </ul>
 
@@ -60,7 +59,7 @@
                     <i class="ri-close-line"></i>
                 </div>
             </div>
-            
+
             <div class="nav-btns">
                 <div class="nav-toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
@@ -82,39 +81,75 @@
         </div>
 
         <!-- HOME -->
-        <section class="home" id="home">
+        <section class="home" id="home" style="min-height: 100vh;">
             <div class="home-container container grid">
 
                 <div class="home-data">
                     <h1 class="home-title">
-                        Map
+                        Archive
                     </h1>
                     <p class="home-description">
-                        3D Maps of Bayview's 3 Floors
+                        Missed it?  No problem!
                     </p>
                 </div>
 
+
+            </div>
+
+            <section class="group section container">
+                <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
+                    <h2 class="section-title-center group-title" style="">
+                        Egg Hunt (Day 1)
+                    </h2>
+                    <p>If you seek the egg, listen to me: the clues that will take you to the end are anywhere and everywhere.</p>
+    
+                    <div style="align-items: center; width: 100%; padding:1%" id="inputArea1" >
+                        
+    
+                    
+    
+                        <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 10vw; text-indent:10vw; " id="code1" placeholder="000">
+                    
+                    </div>
+                    
+    
+                    <p style="padding: 2%;" id="message1">Today's code is a 3 digit number</p>
+                    <button style="align-self: center;" id="egg" onclick="checkCode1()">Submit</button>
+    
+                    <script>
+                    function checkCode1() {
+          var code1 = document.getElementById("code1").value;
+          var message1 = document.getElementById("message1");
+          var inputArea1 = document.getElementById("inputArea1");
+          
+          if (code1 == "132") {
+            message1.innerHTML = "4 days left. <b> The first number is 9 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
+            inputArea1.style.display = "none";
+            egg.style.display = "none";
+          } else {
+            message1.innerHTML = "Incorrect sequence, please try again.";
+          }
+        }
+                    </script>
+                    </div>
+    
+    
+                    
+    
+    
+                </div>
+            </section>
+
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <button onclick="window.location.href = 'index.html'">Back to Home</button>
             </div>
         </section>
 
-        <div class="event-container">
-            <div class="event-container container">
 
-            <!-- Map -->
-                <h2 class="section-title-center">Ground Floor</h2>
-                <img class="" style="padding: 0 10% 10% 10%;" src="assets/img/ground.png">
-                <h2 class="section-title-center">Second Floor</h2>
-                <img class="" style="padding: 0 10% 10% 10%;" src="assets/img/upstairs.png">
-                <h2 class="section-title-center">Basement</h2>
-                <img class="" style="padding: 0 10% 10% 10%;" src="assets/img/basement.png">
-            </div>
-        </div>
-
-
-    
     <!-- FOOTER -->
 
     <footer class="footer section">
+
         <div class="footer-container container grid group-bg">
 
 
@@ -173,6 +208,7 @@
         </div>
         <p style="text-align: center;">Made with ❤️ by Fiona</p>
 
+        
     </footer>
 
     <!-- SCROLL UP -->
