@@ -179,12 +179,12 @@
 
                 
 
-                    <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 10vw; text-indent:10vw; " id="code" placeholder="000">
+                    <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 1vw; text-indent:1vw; " id="code" placeholder="abcdefghi">
                 
                 </div>
                 
 
-                <p style="padding: 2%;" id="message">Today's code is a 3 digit number</p>
+                <p style="padding: 2%;" id="message">Today's code is a CAPTCHA code</p>
                 <button style="align-self: center;" id="egg" onclick="checkCode()">Submit</button>
 
                 <script>
@@ -193,8 +193,8 @@
       var message = document.getElementById("message");
       var inputArea = document.getElementById("inputArea");
       
-      if (code == "132") {
-        message.innerHTML = "4 days left. <b> The first number is 9 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
+      if (code == "hounbecal") {
+        message.innerHTML = "3 days left. <b> The first second is 4 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
         inputArea.style.display = "none";
         egg.style.display = "none";
       } else {
