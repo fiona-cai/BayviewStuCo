@@ -188,24 +188,7 @@
                 <p style="padding: 2%;" id="message3">Today's code is a string of numbers and capital letters.</p>
                 <button style="align-self: center;" id="egg" onclick="checkCode3()">Submit</button>
 
-                <script>
-                function checkCode3() {
-      var code3 = document.getElementById("code3").value;
-      var message3 = document.getElementById("message3");
-      var inputArea = document.getElementById("inputArea3");
-      
-      if (code3 == "29THD03") {
-        message3.innerHTML = "2 days left. <b> The third number is 1 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
-        inputArea.style.display = "none";
-        egg.style.display = "none";
-      } if (code3 == "29THD8W") {
-        message3.innerHTML = "2 days left. <b> The third number is 2 </b>. <br>You’ve completed all the puzzles for today, come back tomorrow!";
-        inputArea.style.display = "none";
-        egg.style.display = "none";
-      } else {
-        message3.innerHTML = "Incorrect sequence, please try again.";
-      }
-    }
+                <script src="assets/js/egg.js">
                 </script>
                 </div>
 
