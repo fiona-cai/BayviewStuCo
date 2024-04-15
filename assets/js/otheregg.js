@@ -1,3 +1,4 @@
+
 function checkCode4() {
     var code4 = document.getElementById("code4").value;
     var message4 = document.getElementById("message4");
